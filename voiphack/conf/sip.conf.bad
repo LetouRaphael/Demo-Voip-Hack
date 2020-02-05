@@ -3,7 +3,8 @@ srvlookup=yes           ; Autorise la résolution DNS
 directmedia=no          ; Force les téléphone à faire transiter les conversation par l'IPBX
 allowguest=yes          ; Autorise la réponse au requète SIP invité
 
-;call-limit=1            Dans une configuration sécurisé : permet d'autoriser uniquement 1 appareil par couple login:motDePasse            
+; call-limit=1            Dans une configuration sécurisé : permet d'autoriser uniquement 1 appareil par couple login:motDePasse            
+; alwaysauthreject=yes    Dans la configuration sécurisé : permet de contrer les tentatives de bruteforce
 
 [modele](!)
 context = tata          ; Contexte de base
