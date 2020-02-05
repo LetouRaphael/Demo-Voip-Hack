@@ -1,22 +1,24 @@
 [general]
-srvlookup=yes
-directmedia=no
-allowguest=yes
+srvlookup=yes           ; Autorise la résolution DNS
+directmedia=no          ; Force les téléphone à faire transiter les conversation par l'IPBX
+allowguest=yes          ; Autorise la réponse au requète SIP invité
+
+;call-limit=1            Dans une configuration sécurisé : permet d'autoriser uniquement 1 appareil par couple login:motDePasse            
 
 [modele](!)
-context = tata           ; commentaires
-bindport=5060
-disallow=all
-allow=alaw
-allow=gsm
-language=fr
-type=friend
+context = tata          ; Contexte de base
+bindport=5060           ; Port utilisé
+disallow=all            ; Désactive tout les codec
+allow=alaw              ; Active le codec alaw
+allow=gsm               : Active le codec gsm
+language=fr             ; Langue de réference pour dossier fichier son
+type=friend             ; type d'appareil
 
 [301](modele)
-host=dynamic
-username=301
-type=friend
-secret=301
+host=dynamic            ; IP attribué par DHCP
+username=301            ; Login
+type=friend             ; répétition non-utile
+secret=301              ; Mot de passe du client SIP
 
 
 [302](modele)
