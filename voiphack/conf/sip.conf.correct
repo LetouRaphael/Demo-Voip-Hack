@@ -3,6 +3,7 @@ srvlookup=yes
 directmedia=no
 allowguest=no
 call-limit=1
+alwaysauthreject=yes
 
 [modele](!)
 context = tata           ; commentaires
@@ -30,7 +31,7 @@ secret=302
 host=dynamic
 username=303
 type=friend
-secret=MotDePasse
+secret=303
 
 [304](modele)
 host=dynamic
@@ -42,7 +43,7 @@ secret=pass
 host=dynamic
 username=305
 type=friend
-secret=pass305
+secret=MotDePasse
 
 
 
