@@ -12,12 +12,16 @@ elif [ $1 == "correct" ];then
 	scp /var/voiphack/conf/sip.conf.correct root@192.168.100.100:/etc/asterisk/sip.conf
 	ssh -t root@192.168.100.100 'asterisk -rx "sip reload"'
 	
-	echo "allowguest=no => Interdit la réponse aux périphérique non authentifié"
-	echo "call-limit=1 => Autorise uniquement un appareil à la fois à utiliser un couple login:pass"
-	echo "alwaysauthreject=yes => Rejette les bruteforce"
-	echo "Complexification des mots de passe"
-
-	echo "Success système corrigé en place"
+	if [[ $# -eq "2" && $2 == "explication" ]];then
 	
+		echo "allowguest=no => Interdit la réponse aux périphérique non authentifié"
+		echo "call-limit=1 => Autorise uniquement un appareil à la fois à utiliser un couple login:pass"
+		echo "alwaysauthreject=yes => Rejette les bruteforce"
+		echo "Complexification des mots de passe"
 
+		echo "Success système corrigé en place"
+	
+	else
+		echo "Success Système de base en place"
+	fi
 fi
