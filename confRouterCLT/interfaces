@@ -1,0 +1,27 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet dhcp
+post-up iptables-restore < /etc/iptables_rules.save
+
+auto eth1
+allow-hotplug eth1
+iface eth1 inet static 
+	address 192.168.200.254
+	netmask 255.255.255.0
+up service isc-dhcp-server restart
+
+allow-hotplug tap0
+iface tap0 inet static 
+	address 10.0.0.2
+	netmask 255.255.255.0
+
+up route add -net 192.168.100.0/24 gw 10.0.0.1
