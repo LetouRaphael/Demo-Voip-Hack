@@ -15,7 +15,7 @@ do
 	case $choix in
 		1) /var/voiphack/authentification.sh;;
 		2) ;;
-		3) ;;
+		3) /var/voiphack/dos.sh;;
 		q) exit;;
 	esac
 done
