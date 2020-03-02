@@ -44,6 +44,7 @@ killall arpspoof
 
 echo "Ecouter la conversation ?"
 
-python3 espion/project.py `ls $DOSSIER`
+python3 project.py `ls $DOSSIER`
 
 sox -r 8000 -e a-law -b 8 -c 1 `ls $DOSSIER/*.raw` $DOSSIER/output.wav
+echo "Fichier .wav généré avec succès !"
