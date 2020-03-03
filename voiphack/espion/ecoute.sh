@@ -2,7 +2,7 @@
 
 
 #Variables
-DOSSIER=`pwd`/capture
+DOSSIER=/var/voiphack/espion/capture
 
 #Script
 
