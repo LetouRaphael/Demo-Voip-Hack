@@ -11,7 +11,7 @@ context = tata          ; Contexte de base
 bindport=5060           ; Port utilisé
 disallow=all            ; Désactive tout les codec
 allow=alaw              ; Active le codec alaw
-allow=gsm               : Active le codec gsm
+allow=gsm               ; Active le codec gsm
 language=fr             ; Langue de réference pour dossier fichier son
 type=friend             ; type d'appareil
 
