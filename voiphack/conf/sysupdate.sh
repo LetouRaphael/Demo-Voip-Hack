@@ -12,7 +12,8 @@ elif [ $1 == "correct" ];then
 	scp /var/voiphack/conf/sip.conf.correct root@192.168.100.100:/etc/asterisk/sip.conf
 	ssh -t root@192.168.100.100 'asterisk -rx "sip reload"'
 	
-	if [[ $# -eq "2" && $2 == "explication" ]];then
+	if [[ $# -eq "2" && $2 == "explication" ]];then	#écris les explication de ce qui est realisé si l'argument "explication est entré"
+							#Sinon éffectue uniquement les modification sans rien afficher
 	
 		echo "allowguest=no => Interdit la réponse aux périphérique non authentifié"
 		echo "call-limit=1 => Autorise uniquement un appareil à la fois à utiliser un couple login:pass"
