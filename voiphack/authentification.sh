@@ -12,7 +12,7 @@ scan ()					# Fonction de détection du serveur
 
 
 
-	net=`ip route | cut -d " " -f 1 | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}"`#Permet de déterminer le réseau sur lequel nous nous situons
+	net=`ip route | cut -d " " -f 1 | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}"`  #Permet de déterminer le réseau sur lequel nous nous situons
 	
 	if [ $auto == true ]; then
 		 plageScan=$net			# Si mode auto alors scan du réseau actuel
@@ -54,7 +54,7 @@ scan ()					# Fonction de détection du serveur
 	cat /tmp/voiphack/svmap
 	bind=`grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" /tmp/voiphack/svmap | cut -d '|' -f 2 | tr -d " "`	# Récupère l'IP et le port dans le résultat
 	ip=`echo $bind | cut -d ":" -f 1`
-	echo $ip > /tmp/voiphack/svmapip Récupère l'IP
+	echo $ip > /tmp/voiphack/svmapip 
 }
 
 	#####################################################
